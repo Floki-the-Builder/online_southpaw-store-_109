@@ -1,0 +1,17 @@
+.product{
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius:5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.product img{
+    width: 200px;
+}
+
+.product label{
+    display: block;
+}
+
