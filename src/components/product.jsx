@@ -20,7 +20,10 @@ const Product = (props)=> {
 
     const handleAdd = () => {
         console.log('Add button pressed')
-        globalAddProd(props.data) // call the global func
+        let prod4Cart = {... props.data, quantity} // call the global func
+
+        globalAddProd(prod4Cart)
+
     }
     return(
         <div className="product">
