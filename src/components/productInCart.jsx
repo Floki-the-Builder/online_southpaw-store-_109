@@ -25,18 +25,18 @@ const ProductInCart = (props) => {
 
             <div className='quantity'>
                  <label className='col-head'>Quantity</label>
-                <label>#{props.data.quantity}</label>
+                <label># {props.data.quantity}</label>
                 
             </div>
 
             <div className='price'>
-                <label>Price</label>
-                <label>${props.data.price}</label>
+                <label>Price </label>
+                <label>$ {props.data.price}</label>
             </div>
 
             <div className='total'>       
                 <label >Total</label>         
-                <label>{getTotal()}</label>
+                <label>$ {getTotal()}</label>
             </div>
             
             <button onClick={handleRemove}className='btn btn-sm btn-danger'>Remove</button>

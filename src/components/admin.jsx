@@ -1,5 +1,6 @@
 import './admin.css'
 import {useState} from 'react'
+import DataAService from "../services/dataService";
 
 // create two sefctions .... create from / coupon
 const Admin = () => {
@@ -48,6 +49,11 @@ const Admin = () => {
        let product2Save = {... product};
        product2Save.price = parseFloat(product2Save.price);
        console.log(product2Save);
+
+       // save copy on server
+    let service = new DataAService()
+    service.saveProduct(product2Save)
+       //save prod on state arr
        
        let copyAllProduct = [... allProduct]
        copyAllProduct.push(product2Save);

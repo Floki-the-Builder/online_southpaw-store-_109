@@ -6,14 +6,16 @@ import DataService from '../services/dataService';
 const Catalog = () => {
     let [products, setProducts]= useState([]);
 
-    const loadCatalog = () => {
+    // fetchCatalog
+    const fetchCatalog = async () => {
         let service = new DataService();
-        let data = service.getCatalog();
+        let data = await service.getCatalog();
+        console.log(data)
         setProducts(data);
     }
 
     useEffect(()=> {
-        loadCatalog();
+        fetchCatalog();
     }, [])
 
    
